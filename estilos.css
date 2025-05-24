@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0A0F1C;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0A0F1C;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  display: block;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0.5rem 1rem;
+  font-size: 0.95rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero-icon img {
+  height: 80px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.hero button {
+  padding: 0.8rem 2rem;
+  background-color: #FF6600;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.section {
+  padding: 3rem 2rem;
+}
+
+.section h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.product {
+  background-color: #111827;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #0A0F1C;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+.newsletter {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.newsletter input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  min-width: 200px;
+}
+
+.newsletter button {
+  padding: 0.5rem 1rem;
+  background-color: #00E0C7;
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .products {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
