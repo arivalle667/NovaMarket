@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:4000'; // Cambia el puerto si es necesario
+const API_URL = 'https://novamarket-backend.onrender.com'; // Cambia el puerto si es necesario
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 document.addEventListener('DOMContentLoaded', () => {
