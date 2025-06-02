@@ -16,11 +16,13 @@ header {
   background-color: #007BFF;
   color: #FFFFFF;
   padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   flex-wrap: wrap;
+  /* Elimina estas líneas si no quieres que se quede pegado */
+  /* position: sticky;
+  top: 0;
+  z-index: 1000; */
 }
+
 
 header a{
   color: white;
