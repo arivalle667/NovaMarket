@@ -548,6 +548,7 @@ input[type="password"],
 input[type="number"],
 textarea,
 select {
+  width: 100%;
   padding: 12px 15px;
   margin: 8px 0;
   display: block;
