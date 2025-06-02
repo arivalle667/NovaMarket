@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaMarket - Electrónica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <div>NOVA MARKET</div>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#productos">Productos</a>
+      <a href="#redes-sociales">Nosotros</a>
+      <a href="#">Soporte</a>
+      <div class="cart">
+        <a href="#carrito">🛒<span class="cart-count" id="cart-count">0</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-icon">
+        <img src="img/logo.png" alt="NovaMarket Logo">
+      </div>
+      <h1>Todo lo que buscas, a un clic de distancia.</h1>
+      <p>Descubre productos innovadores, al mejor precio</p>
+      <a href="#ofertas">
+        <button>Ver Productos</button>
+      </a>
+    </div>
+  </section>
+  
+  <!-- Lista de categorias -->
+  <div class="section" id="ofertas">
+    <p id="loading-text">Cargando ofertas...</p>
+  </div>
+
+  <!-- Lista de categorias -->
+  <div class="section" id="categorias">
+    <p id="loading-text">Cargando categorias...</p>
+  </div>
+
+  <!-- Lista de productos -->
+  <div class="section" id="productos">
+    <p id="loading-text">Cargando productos...</p>
+  </div>
+
+  <section class="section" id="carrito">
+    <h2>🛒 Carrito de Compras</h2>
+    <div id="boton-vaciar-carrito"><button id="vaciar-carrito">🧹 Vaciar</button></div>
+    <div id="lista-carrito">
+      <!-- Aquí se cargarán los productos -->
+    </div>
+    <div id="total-carrito">
+      Total: $0.00
+    </div>
+  </section>
+
+  <section class="section" id="datos_entrega">
+    
+        <h2>Datos para la entrega</h2>
+
+        <!-- Calendario -->
+        <div>
+          <label for="calendar">Fecha:</label>
+          <input type="date" id="calendar" onchange="updateSelection()">
+        </div>
+
+        <!-- Desplegable para horas -->
+        <div>
+          <label for="time">Hora:</label>
+          <select id="time" onchange="updateSelection()">
+            <option value="">Selecciona una hora</option>
+            <option value="09:00">09:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="18:00">18:00</option>
+            <option value="19:00">19:00</option>
+            <option value="20:00">20:00</option>
+          </select>
+        </div>
+        
+        <!-- Desplegable para el lugar -->
+        <div>
+          <label for="lugar">Lugar:</label>
+          <select id="lugar" onchange="updateSelection()">
+            <option value="">Selecciona el lugar de la entrega</option>
+            <option value="La Paz, Plaza San Francisco">La Paz, Plaza San Francisco</option>
+            <option value="La Paz, Plaza del Estadio Hernando Siles">La Paz, Plaza del Estadio Hernando Siles</option>
+            <option value="La Paz, Plaza Villarroel">La Paz, Plaza Villarroel</option>
+            <option value="La Paz, Plaza del Maestro">La Paz, Plaza del Maestro</option>
+            <option value="La Paz, Correos">La Paz, Correos</option>
+            <option value="La Paz, Av. Hernando Siles, Plaza de la loba">La Paz, Av. Hernando Siles, Plaza de la loba</option>
+            <option value="Otro departamento (ENVIO)">Otro departamento (ENVIO)</option>
+          </select>
+        </div>
+
+        <!-- Información seleccionada -->
+        <p class="selected-info" id="selectedInfo"></p>
+        <p class="selected-info2" id="selectedInfo2"></p>
+
+        <button onclick="buyItems()">Comprar</button>
+  </section>
+
+  <h2>Siguenos</h2>
+  <!-- Sección de redes sociales -->
+  <section class="redes-sociales" id="redes-sociales">
+    <a href="https://facebook.com" target="_blank" rel="noopener">
+        <img src="img/FacebookLogo.png" alt="Facebook">
+    </a>
+    <a href="https://instagram.com" target="_blank" rel="noopener">
+        <img src="img/InstagramIcon.png" alt="Instagram">
+    </a>
+    <a href="https://tiktok.com" target="_blank" rel="noopener">
+        <img src="img/tiktoklogo.png" alt="TikTok">
+    </a>
+  </section>
+
+  <footer>
+    <p>Recibe ofertas exclusivas</p>
+    <div class="newsletter">
+      <input type="email" placeholder="Email" />
+      <button onclick="enviarCorreo()">Enviar</button>
+    </div>
+    <p>&copy; 2025 NovaMarket. Todos los derechos reservados.</p>
+    <p>ARIEL VICTOR VALLE FERNANDEZ</p>
+    <p> PROYECTO INF 316 PARALELO "A", CARRERA DE INFORMATICA, UMSA</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
