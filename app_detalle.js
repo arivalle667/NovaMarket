@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:4000';
+const API_URL = 'https://novamarket-backend.onrender.com';
 
 document.addEventListener('DOMContentLoaded', async () => {
   let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
